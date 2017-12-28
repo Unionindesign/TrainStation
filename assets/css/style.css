@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(117, 139, 138);
+}
+
+.red-card {
+    background-color: rgb(187, 154, 154);
+}
+.red-cardHdr {
+    background-color: rgb(187, 154, 154);
+    width: 100%;
+}
+.form-area {
+    background-color: #fff;
+    padding: 2.5%;
+}

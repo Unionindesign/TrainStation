@@ -1,0 +1,104 @@
+
+  <!DOCTYPE html>
+  <html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Train schedule app</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- my styles -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card red-card">
+                            <div class="card-image">
+                                <img src="./assets/images/bannerimg.png">
+                                <span class="card-title"><i class="medium material-icons">train</i>Be ready when the train comes</span>
+                            </div>
+                            <div class="card-content">
+                                    
+                                <p>See the most up to date train schedules, and get a conductor's pass to add and make live updates</p>
+                                <hr>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel white">
+                            <div class="red-cardHdr">
+                                <h5 class="card-title"><i class="material-icons">schedule</i>Latest Train Schedule</h5>
+                            </div>
+                            <div class="card-content">
+                                This is where the data goes    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="form-area">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="red-cardHdr">
+                                <h5 class="card-title"><i class="material-icons">chat</i>Add a train</h5>
+                            </div>
+                        </div>
+                    </div>
+                
+                        <div class="card-content">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                    <input placeholder="ex. Rocky Mountain Express" id="train_name" type="text" class="validate">
+                                    <label for="train_name">Train Name</label>
+                                    </div>
+
+                                    <div class="input-field col s6">
+                                    <input placeholder="Where to?"id="destination_name" type="text" class="validate">
+                                    <label for="destination_name">Destination</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                    <input placeholder="How often does the train run?" id="freq" type="text" class="validate">
+                                    <label for="frequency">Frequency (mins)</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input type="text" class="timepicker">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+          </div>
+         
+
+
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script type="text/javascript" src="./assets/javascript/logic.js"></script>
+    </body>
+  </html>
