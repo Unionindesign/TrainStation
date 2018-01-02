@@ -8,6 +8,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- my styles -->
@@ -26,13 +28,13 @@
                                 <span class="card-title"><i class="medium material-icons">train</i>Be ready when the train comes</span>
                             </div>
                             <div class="card-content">
-                                    
+                                <hr>   
                                 <p>See the most up to date train schedules, and get a conductor's pass to add and make live updates</p>
-                                <hr>
+                                
                             </div>
-                            <div class="card-action">
+                            <!-- <div class="card-action">
                                 <a href="#">Learn more</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -44,7 +46,27 @@
                                 <h5 class="card-title"><i class="material-icons">schedule</i>Latest Train Schedule</h5>
                             </div>
                             <div class="card-content">
-                                This is where the data goes    
+                                <table id="train-schedule-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Train Name:</th>
+                                            <th>Destination:</th>
+                                            <th>Frequency (min):</th>
+                                            <th>Next Arrival:</th>
+                                            <th>Minutes Away:</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <!-- <td>Rocky Mountain Super Train</td>
+                                            <td>Breckinridge</td>
+                                            <td>60</td>
+                                            <td></td>
+                                            <td></td> -->
+                                        </tr>
+
+                                    </tbody>
+                                </table> 
                             </div>
                         </div>
                     </div>
@@ -76,14 +98,22 @@
 
                                 <div class="row">
                                     <div class="input-field col s12">
-                                    <input placeholder="How often does the train run?" id="freq" type="text" class="validate">
+                                    <input placeholder="How often does the train run?" id="frequency" type="text" class="validate">
                                     <label for="frequency">Frequency (mins)</label>
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input type="text" class="timepicker">
+                                        <input placeholder="What time does the first train depart?" id="first_train_time" type="text" class="timepicker"> <!-- THis is the timepicker pop-up clock -->
+                                        <label for="first_train_time">24hr (HH:mm military time)</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field left-align">
+                                        <button class="btn" id="submit" type="submit" name="action">
+                                            Submit <i class="material-icons right">send</i>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -98,7 +128,11 @@
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <!-- Matrialize JS -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <!-- Added Moment JS -->
+      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+      <!-- Logic file -->
       <script type="text/javascript" src="./assets/javascript/logic.js"></script>
     </body>
   </html>
