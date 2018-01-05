@@ -81,7 +81,7 @@
     console.log("Arrival time: " + moment(nextTrain).format("hh:mm"));
 
     $("#train-schedule-table > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency +
-"</td><td>" + nextTrain + "</td></tr>");
+"</td><td>" + (nextTrain).format("hh:mm") + "</td><td>" + minsTillTrain + "</td></tr>");
 
 });
 
